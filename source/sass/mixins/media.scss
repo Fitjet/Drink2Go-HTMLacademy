@@ -1,0 +1,23 @@
+@mixin tabl-more {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desc-more {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin talet {
+  @media (min-width: 768px) and (max-width: 1299px) {
+    @content;
+  }
+}
