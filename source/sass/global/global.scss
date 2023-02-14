@@ -1,6 +1,39 @@
+*:focus {
+  outline: none;
+}
+
 .page {
   height: 100%;
   background-color: $b-white;
+  user-select: none;
+
+  &--nojs .swiper-button-prev,
+  &--nojs .swiper-button-next{
+    display: none;
+  }
+
+  &--nojs .swiper-slide {
+    width: 99vw;
+  }
+
+  &--nojs .swiper-wrapper {
+    overflow: auto;
+  }
+
+  &--nojs .map {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  @include mobile {
+    &--nojs .header {
+      margin-bottom: 229px;
+    }
+
+    &--nojs .user-nav__switch {
+      display: none;
+    }
+  }
 }
 
 .page__body {
@@ -29,4 +62,114 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.clear-link {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 728px;
+  }
+
+  @include desctop-more {
+    max-width: 1360px;
+    padding: 0 40px;
+  }
+
+  &--header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--slide {
+    box-sizing: border-box;
+    padding: 20px 0 60px;
+
+    @include tablet-more {
+      padding: 50px 60px 496px;
+    }
+
+    @include desctop-more {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding-top: 30px;
+      padding-bottom: 84px;
+    }
+  }
+}
+
+.button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: $b-primary;
+  color: $b-white;
+  padding: 8px 20px;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $p-lighter;
+  }
+
+  &:active {
+    background-color: $p-darker;
+  }
+
+  &:disabled {
+    background-color: $b-grey;
+  }
+
+  &--light {
+    background-color: $b-white;
+    color: $b-primary;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+      color: $b-white;
+    }
+
+    &:disabled {
+      background-color: $light-grey;
+    }
+  }
+}
+
+.badge {
+  @include b-s12-h16;
+  color: $b-primary;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 4px;
+}
+
+.similar-title {
+  @include b-s24-h36;
+  text-align: center;
+  margin: 0;
+
+  @include tablet-more {
+    @include b-s42-h64;
+  }
 }

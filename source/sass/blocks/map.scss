@@ -1,0 +1,26 @@
+.map {
+  height: 420px;
+  background-color: $b-secondary;
+
+  @include tablet-more {
+    height: 480px;
+  }
+
+  @include desctop-more {
+    height: 540px;
+  }
+}
+
+.map__info {
+  @include r-s12-h16;
+  color: $red-nojs;
+  text-align: center;
+
+  @include tablet-more {
+    @include r-s14-h20;
+  }
+
+  @include tablet-more {
+    @include r-s16-h24;
+  }
+}

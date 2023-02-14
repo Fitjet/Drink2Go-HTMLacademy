@@ -1,5 +1,48 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  position: relative;
+  min-height: 60px;
+  background-color: $b-white;
+  color: $b-black;
 }
+
+@include mobile {
+  .header--nav-opened .header__main-nav {
+    display: block;
+  }
+}
+
+.user-nav__button--switch::before {
+  content: "";
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 2px;
+  background-color: $b-black;
+  box-shadow: 0 4.5px 0 0 $b-black, 0 9px 0 0 $b-black;
+}
+
+.header--nav-opened .user-nav__button--switch {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 2px;
+    background-color: $b-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+

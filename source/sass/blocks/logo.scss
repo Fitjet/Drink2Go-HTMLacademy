@@ -1,0 +1,28 @@
+.logo {
+  box-sizing: border-box;
+  padding: 12px 0;
+
+  @include tablet-more {
+    padding: 22px 0;
+  }
+
+  @include desctop-more {
+    display: flex;
+  }
+}
+
+.logo__img {
+  display: block;
+  width: fit-content;
+}
+
+.logo__descr {
+  display: none;
+
+  @include desctop-more {
+    @include r-s12-h16;
+    display: inline;
+    margin: auto 0 auto 20px;
+    width: 130px;
+  }
+}

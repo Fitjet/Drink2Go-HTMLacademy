@@ -6,6 +6,19 @@
 @import "global/variables";
 @import "global/global";
 @import "global/fonts";
+@import "global/plugins";
 
 /* BLOCKS */
 @import "blocks/header";
+@import "blocks/logo";
+@import "blocks/main-nav";
+@import "blocks/user-nav";
+
+@import "blocks/swiper-slide";
+@import "blocks/advantages";
+@import "blocks/catalog";
+@import "blocks/filter";
+@import "blocks/control";
+@import "blocks/map";
+
+@import "blocks/footer";

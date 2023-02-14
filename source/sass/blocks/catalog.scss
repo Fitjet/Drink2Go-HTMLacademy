@@ -1,0 +1,22 @@
+.catalog {
+  background-color: $lightest-grey;
+  padding-top: 50px;
+  padding-bottom: 44px;
+
+  @include tablet-more {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  @include desctop-more {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
+.catalog__container {
+  @include desctop-more {
+    display: flex;
+    justify-content: space-between;
+  }
+}

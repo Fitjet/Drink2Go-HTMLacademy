@@ -1,11 +1,11 @@
-@mixin tabl-more {
+@mixin tablet-more {
   @media (min-width: 768px) {
     @content;
   }
 }
 
-@mixin desc-more {
-  @media (min-width: 1300px) {
+@mixin desctop-more {
+  @media (min-width: 1440px) {
     @content;
   }
 }
@@ -16,8 +16,8 @@
   }
 }
 
-@mixin talet {
-  @media (min-width: 768px) and (max-width: 1299px) {
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1399px) {
     @content;
   }
 }
